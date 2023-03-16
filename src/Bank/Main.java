@@ -58,22 +58,38 @@ class CreditCardAccount extends Account{
         }else {
             System.out.println("Amount exceed the credit card limit!!! ");
         }
+
+    }
+    void setCreditCardLimit( float creditCardLimit){
+        this.creditCardLimit = creditCardLimit;
+
     }
 }
+
+// Test Saving account
+//public class Main {
+//    public static void main(String[] args) {
+//        SavingAccount account1 = new SavingAccount();
+//        account1.deposit(1000);
+//        account1.setInterestRates(50);
+//        System.out.println("Interest of balance : " + account1.calculateInterest()+ "$");
+//        System.out.println("Original amount : "+ account1.getBalance()+ "$");
+//        System.out.println("Total money "+ account1.calculateInterest()+"$");
+//
+//        account1.withdraw(1000);
+//        System.out.println("Money left : "+ account1.getBalance()+"$");
+//    }
+//}
+
+// test CreditCardAccount
 public class Main {
     public static void main(String[] args) {
-        SavingAccount account1 = new SavingAccount();
-        account1.deposit(1000);
-        account1.setInterestRates(50);
-        System.out.println("Interest of balance : " + account1.calculateInterest()+ "$");
-        System.out.println("Original amount : "+ account1.getBalance()+ "$");
-        System.out.println("Total money "+ account1.calculateInterest()+"$");
-
-        account1.withdraw(1000);
-        System.out.println("Money left : "+ account1.getBalance()+"$");
+        CreditCardAccount creditCardAccount = new CreditCardAccount();
+        creditCardAccount.deposit(100);
+        creditCardAccount.setCreditCardLimit(50);
+        creditCardAccount.withdraw(20);
+        System.out.println("Money in account is : " + creditCardAccount.getBalance());
     }
-
-
 }
 
 
