@@ -9,8 +9,5 @@ public class Main {
         BankingServiceII savingAccount = new BankingServiceII(new SavingAccount());
         savingAccount.deposit(500);
         System.out.println("Saving Balance : "+creditAccount.showBalance()+"$");
-
-//        BankingServiceII visaAccount = new BankingServiceII(new VisaAccount() );
-
     }
 }
